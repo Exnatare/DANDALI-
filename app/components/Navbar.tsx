@@ -11,31 +11,31 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className="container">
-        <div className={styles.nav-content}>
+        <div className={styles.navContent}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logo-icon}>📱</span>
-            <span className={styles.logo-text}>DANDALI</span>
+            <span className={styles.logoIcon}>📱</span>
+            <span className={styles.logoText}>DANDALI</span>
           </Link>
 
           <button
-            className={styles.menu-button}
+            className={styles.menuButton}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          <div className={`${styles.nav-links} ${isOpen ? styles.open : ''}`}>
-            <Link href="/apps" className={styles.nav-link}>
+          <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
+            <Link href="/apps" className={styles.navLink}>
               Apps
             </Link>
-            <Link href="/tools" className={styles.nav-link}>
+            <Link href="/tools" className={styles.navLink}>
               Device Tools
             </Link>
-            <Link href="/utilities" className={styles.nav-link}>
+            <Link href="/utilities" className={styles.navLink}>
               Utilities
             </Link>
-            <Link href="/about" className={styles.nav-link}>
+            <Link href="/about" className={styles.navLink}>
               About
             </Link>
           </div>

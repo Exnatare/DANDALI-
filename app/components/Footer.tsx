@@ -10,31 +10,31 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <div className={styles.footer-content}>
-          <div className={styles.footer-section}>
-            <h3 className={styles.footer-title}>DANDALI</h3>
-            <p className={styles.footer-description}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerSection}>
+            <h3 className={styles.footerTitle}>DANDALI</h3>
+            <p className={styles.footerDescription}>
               Discover apps, manage device tools, and access mobile utilities from one clean interface.
             </p>
-            <div className={styles.social-links}>
-              <a href="#" aria-label="GitHub" className={styles.social-link}>
+            <div className={styles.socialLinks}>
+              <a href="#" aria-label="GitHub" className={styles.socialLink}>
                 <Github size={20} />
               </a>
-              <a href="#" aria-label="Twitter" className={styles.social-link}>
+              <a href="#" aria-label="Twitter" className={styles.socialLink}>
                 <Twitter size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className={styles.social-link}>
+              <a href="#" aria-label="LinkedIn" className={styles.socialLink}>
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:support@dandali.com" aria-label="Email" className={styles.social-link}>
+              <a href="mailto:support@dandali.com" aria-label="Email" className={styles.socialLink}>
                 <Mail size={20} />
               </a>
             </div>
           </div>
 
-          <div className={styles.footer-section}>
-            <h4 className={styles.footer-section-title}>Quick Links</h4>
-            <ul className={styles.footer-links}>
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSectionTitle}>Quick Links</h4>
+            <ul className={styles.footerLinks}>
               <li>
                 <Link href="/apps">Apps</Link>
               </li>
@@ -50,9 +50,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className={styles.footer-section}>
-            <h4 className={styles.footer-section-title}>Legal</h4>
-            <ul className={styles.footer-links}>
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSectionTitle}>Legal</h4>
+            <ul className={styles.footerLinks}>
               <li>
                 <Link href="/privacy">Privacy Policy</Link>
               </li>
@@ -65,26 +65,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className={styles.footer-section}>
-            <h4 className={styles.footer-section-title}>Newsletter</h4>
-            <p className={styles.newsletter-text}>
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSectionTitle}>Newsletter</h4>
+            <p className={styles.newsletterText}>
               Get updates on new apps and tools
             </p>
-            <form className={styles.newsletter-form}>
+            <form className={styles.newsletterForm}>
               <input
                 type="email"
                 placeholder="Your email"
-                className={styles.newsletter-input}
+                className={styles.newsletterInput}
                 required
               />
-              <button type="submit" className={styles.newsletter-button}>
+              <button type="submit" className={styles.newsletterButton}>
                 Subscribe
               </button>
             </form>
           </div>
         </div>
 
-        <div className={styles.footer-bottom}>
+        <div className={styles.footerBottom}>
           <p>&copy; {currentYear} DANDALI. All rights reserved.</p>
         </div>
       </div>

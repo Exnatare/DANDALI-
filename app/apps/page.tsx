@@ -84,7 +84,7 @@ export default function AppsPage() {
                 <div className={styles.appMeta}>
                   <div className={styles.rating}>
                     <span className={styles.star}>⭐</span>
-                    <span className={styles.rating-text}>{app.rating}</span>
+                    <span className={styles.ratingText}>{app.rating}</span>
                   </div>
                   <span className={styles.downloads}>{app.downloads}</span>
                 </div>

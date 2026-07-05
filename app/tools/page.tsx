@@ -75,7 +75,7 @@ export default function ToolsPage() {
     },
   ]
 
-  const toggleTool = (tool: string) => {
+  const toggleTool = (tool: keyof typeof toggles) => {
     setToggles(prev => ({
       ...prev,
       [tool]: !prev[tool]
