@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Battery, Wifi, Storage, Settings, Volume2, Brightness4, Download, Trash2, Lock, Power } from 'lucide-react'
+import { Battery, Wifi, HardDrive, Settings, Volume2, Sun, Download, Trash2, Lock, Power } from 'lucide-react'
 import styles from './tools.module.css'
 
 export default function ToolsPage() {
@@ -26,7 +26,7 @@ export default function ToolsPage() {
       color: 'color-blue'
     },
     {
-      icon: <Storage size={32} />,
+      icon: <HardDrive size={32} />,
       name: 'Storage Cleaner',
       description: 'Clean up unused files and free up space',
       color: 'color-purple'
@@ -44,7 +44,7 @@ export default function ToolsPage() {
       color: 'color-pink'
     },
     {
-      icon: <Brightness4 size={32} />,
+      icon: <Sun size={32} />,
       name: 'Display Control',
       description: 'Adjust brightness and display settings',
       color: 'color-yellow'

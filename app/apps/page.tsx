@@ -33,7 +33,7 @@ export default function AppsPage() {
   })
 
   return (
-    <div className={styles.apps-page}>
+    <div className={styles.appsPage}>
       <div className={styles.header}>
         <div className="container">
           <h1 className={styles.title}>Discover Apps</h1>
@@ -42,26 +42,26 @@ export default function AppsPage() {
       </div>
 
       <div className="container">
-        <div className={styles.filters-section}>
-          <div className={styles.search-bar}>
-            <Search size={20} className={styles.search-icon} />
+        <div className={styles.filtersSection}>
+          <div className={styles.searchBar}>
+            <Search size={20} className={styles.searchIcon} />
             <input
               type="text"
               placeholder="Search apps..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className={styles.search-input}
+              className={styles.searchInput}
             />
           </div>
 
-          <div className={styles.category-filters}>
-            <Filter size={20} className={styles.filter-icon} />
-            <div className={styles.category-buttons}>
+          <div className={styles.categoryFilters}>
+            <Filter size={20} className={styles.filterIcon} />
+            <div className={styles.categoryButtons}>
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`${styles.category-button} ${selectedCategory === cat ? styles.active : ''}`}
+                  className={`${styles.categoryButton} ${selectedCategory === cat ? styles.active : ''}`}
                 >
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </button>
@@ -70,33 +70,33 @@ export default function AppsPage() {
           </div>
         </div>
 
-        <div className={styles.results-info}>
+        <div className={styles.resultsInfo}>
           <p>Found <span className={styles.count}>{filteredApps.length}</span> apps</p>
         </div>
 
         {filteredApps.length > 0 ? (
-          <div className={styles.apps-grid}>
+          <div className={styles.appsGrid}>
             {filteredApps.map((app) => (
-              <div key={app.id} className={styles.app-item}>
-                <div className={styles.app-icon}>{app.icon}</div>
-                <h3 className={styles.app-title}>{app.name}</h3>
-                <p className={styles.app-description}>{app.description}</p>
-                <div className={styles.app-meta}>
+              <div key={app.id} className={styles.appItem}>
+                <div className={styles.appIcon}>{app.icon}</div>
+                <h3 className={styles.appTitle}>{app.name}</h3>
+                <p className={styles.appDescription}>{app.description}</p>
+                <div className={styles.appMeta}>
                   <div className={styles.rating}>
                     <span className={styles.star}>⭐</span>
                     <span className={styles.rating-text}>{app.rating}</span>
                   </div>
                   <span className={styles.downloads}>{app.downloads}</span>
                 </div>
-                <button className={styles.download-button}>
+                <button className={styles.downloadButton}>
                   Install
                 </button>
               </div>
             ))}
           </div>
         ) : (
-          <div className={styles.empty-state}>
-            <p className={styles.empty-message}>No apps found matching your search</p>
+          <div className={styles.emptyState}>
+            <p className={styles.emptyMessage}>No apps found matching your search</p>
           </div>
         )}
       </div>
